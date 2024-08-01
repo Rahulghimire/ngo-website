@@ -1,8 +1,18 @@
-import "./App.css";
-import { Typography } from "antd";
+import { Layout } from "antd";
+import { Navbar } from "./components/navbar";
+const { Content, Footer } = Layout;
 
 function App() {
-  return <Typography.Text>React Vite App</Typography.Text>;
+  return (
+    <Layout>
+      <Content>
+        <Navbar />
+      </Content>
+      <Footer style={{ textAlign: "center" }}>
+        NGO Website ©{new Date().getFullYear()} Created by Rahul Ghimire
+      </Footer>
+    </Layout>
+  );
 }
 
 export default App;
