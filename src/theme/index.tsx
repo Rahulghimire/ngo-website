@@ -1,5 +1,5 @@
 import { ConfigProvider, theme } from "antd";
-import { useResponsiveQuery } from "../utlis/getResponsive";
+import { useResponsiveQuery } from "../utlis/getScreenSizes";
 
 interface Props {
   children?: React.ReactNode;
@@ -14,10 +14,12 @@ export const AppThemeProvider: React.FC<Props> = (props) => {
         algorithm: theme.defaultAlgorithm,
         token: {
           fontFamily: "Helvetica Neue",
-          fontSize: isBigScreen ? 16 : isDesktopOrLaptop ? 14 : 12,
+          fontSize: isBigScreen ? 18 : isDesktopOrLaptop ? 16 : 12,
         },
         components: {
-          Layout: {},
+          Layout: {
+            padding: 40,
+          },
         },
       }}
     >
