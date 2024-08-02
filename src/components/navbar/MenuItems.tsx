@@ -1,4 +1,5 @@
-import { MenuProps } from "antd";
+import type { MenuProps } from "antd";
+import { Link } from "react-router-dom";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -8,8 +9,8 @@ export const items: MenuItem[] = [
     key: "home",
   },
   {
-    label: "About Us",
     key: "about_us",
+    label: <Link to="/about-us">About Us</Link>,
   },
   {
     label: "What We Do",
